@@ -1,0 +1,5 @@
+name,price,quantity,categoryId,supplierId
+Laptop,55000,10,1,2
+Mouse,500,50,1,2
+Keyboard,1200,25,1,2
+Monitor,12000,15,1,2

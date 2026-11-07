@@ -1,0 +1,316 @@
+.stock-page {
+  padding: 30px;
+}
+
+/* ==============================
+   HEADER
+============================== */
+
+.stock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.stock-header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.stock-header p {
+  margin-top: 6px;
+  color: #666;
+}
+
+.stock-count {
+  background: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.stock-count span {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.stock-count small {
+  color: #666;
+}
+
+/* ==============================
+   MESSAGES
+============================== */
+
+.stock-message {
+  padding: 13px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.stock-message.success {
+  background: #e8f7ee;
+  color: #1e7e45;
+}
+
+.stock-message.error {
+  background: #fdecec;
+  color: #c62828;
+}
+
+/* ==============================
+   CARD
+============================== */
+
+.stock-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-title h2 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.card-title p {
+  margin: 5px 0 0;
+  color: #777;
+}
+
+/* ==============================
+   FORM
+============================== */
+
+.stock-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4a6cf7;
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.form-actions button {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.stock-in-btn {
+  background: #198754;
+  color: white;
+}
+
+.stock-in-btn:hover {
+  background: #157347;
+}
+
+.stock-out-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.stock-out-btn:hover {
+  background: #bb2d3b;
+}
+
+.clear-btn {
+  background: #e9ecef;
+  color: #333;
+}
+
+.clear-btn:hover {
+  background: #d6d9dc;
+}
+
+.form-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==============================
+   TABLE
+============================== */
+
+.table-container {
+  overflow-x: auto;
+}
+
+.stock-table,
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stock-table th,
+.stock-table td,
+.transaction-table th,
+.transaction-table td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.stock-table th,
+.transaction-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.stock-table tbody tr:hover,
+.transaction-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.product-name {
+  font-weight: 600;
+}
+
+.quantity {
+  font-weight: 600;
+}
+
+/* ==============================
+   STOCK STATUS
+============================== */
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.in-stock {
+  background: #e8f7ee;
+  color: #198754;
+}
+
+.low-stock {
+  background: #fff4d6;
+  color: #b77900;
+}
+
+.out-of-stock {
+  background: #fdecec;
+  color: #dc3545;
+}
+
+/* ==============================
+   TRANSACTION BADGES
+============================== */
+
+.transaction-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.transaction-badge.stock-in {
+  background: #e8f7ee;
+  color: #198754;
+}
+
+.transaction-badge.stock-out {
+  background: #fdecec;
+  color: #dc3545;
+}
+
+/* ==============================
+   LOADING / EMPTY
+============================== */
+
+.loading,
+.empty-state {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
+  .stock-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    grid-column: auto;
+  }
+
+  .stock-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stock-page {
+    padding: 15px;
+  }
+
+  .stock-card {
+    padding: 18px;
+  }
+
+  .stock-header h1 {
+    font-size: 25px;
+  }
+}
